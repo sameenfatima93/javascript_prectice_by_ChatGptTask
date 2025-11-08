@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color Changing App</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0px;
+            padding: 50px 50px;
+            box-sizing: border-box;
+            background-color: blanchedalmond;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: #000;
+            transition: background-color 0.8s ease, color 0.8s ease; 
+        }
+        .colorCode{
+            transition: background-color 6s ease, color 0.8s ease; 
+        }
+        h1{
+            font-size: 3rem;
+            font-weight: bolder;
+            text-align: center;
+            margin: 0px auto;
+        }
+        p{
+             font-size: 3rem;
+            font-weight: bolder;
+            text-align: center;
+            margin: 0px auto;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body id="move">
+    <h1 id="colorCode">welcome to color changing App</h1>
+    <p>The color will be change when mouse move.</p>
+<script>
+    document.getElementById("move").addEventListener("mousemove", function (){
+        var changeColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+        document.body.style.backgroundColor= changeColor;
+        // var changeTextColor =  "#" + Math.floor(Math.random() * 16777215).toString(16);
+        // document.getElementById("colorCode").style.color= changeColor;
+        // console.log("mouse is worked")
+        
+        
+    })
+
+//     let timeoutId;
+
+// document.getElementById("move").addEventListener("mousemove", function (){
+//   clearTimeout(timeoutId); // reset previous timer
+  
+//   timeoutId = setTimeout(() => {
+//     var changeColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+//     document.body.style.backgroundColor = changeColor;
+
+//     var changeTextColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+//     document.getElementById("colorCode").style.color = changeTextColor;
+
+//     document.getElementById("colorCode").innerText = 
+//       "Background: " + changeColor + " | Text: " + changeTextColor;
+//   }, 300); // <-- color changes every 300ms
+// });
+
+</script>
+</body>
+</html>

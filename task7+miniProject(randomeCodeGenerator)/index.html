@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator App</title>
+
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url(bgimg.jpg);
+            background-size: cover;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .bg {
+            height: 250px;
+            width: 500px;
+            max-width: 90%;
+            background-color: rgba(99, 204, 223, 0.25);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 25px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            color: rgb(3, 48, 70);
+            font-weight: 800;
+            text-align: center;
+            font-size: 22px;
+            transition: all 0.5s ease;
+        }
+
+
+        h1 {
+            font-size: 3.50rem;
+        }
+
+
+        .btn {
+            height: 50px;
+            width: 180px;
+            background-color: rgb(1, 104, 128);
+            border-radius: 15px;
+            color: white;
+            border: 2px solid rgb(1, 104, 128);
+            font-size: 20px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: rgb(17, 77, 91);
+
+        }
+
+        .bg p,
+        #qoute {
+            font-size: 28px;
+            /* 🔹 Increased quote size */
+            font-weight: 700;
+            color: rgb(3, 48, 70);
+            font-family: 'Lucida Sans', 'Lucida Grande', Geneva, Verdana, sans-serif;
+            text-align: center;
+            transition: color 0.5s ease;
+        }
+
+        .fade {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .bg {
+            transition: opacity 0.5s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><q>Random Quote Generator App</q></h1>
+
+    <div class="bg" id="bgdiv">
+        <p id="qoute">click the button to see the quote</p>
+    </div>
+
+    <button id="newQoute" class="btn">See the Qoute</button>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
